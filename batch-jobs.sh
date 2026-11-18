@@ -1,7 +1,8 @@
 #! /bin/bash
 
-parts=(part_aa part_ab part_ac part_ad part_ae part_af part_ag part_ah part_ai part_aj)
+parts=(new_part_aa new_part_ab new_part_ac new_part_ad new_part_ae new_part_af new_part_ag new_part_ah new_part_ai part_aj)
 
 for part in "${parts[@]}"; do
     tmux new-session -d -s $part "/home/dx1/RIDE/Regression-Testing/runner.sh $part"
+    sleep 10m
 done

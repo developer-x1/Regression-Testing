@@ -4,8 +4,12 @@ cd ~
 
 runner_id=$1
 
-for repo in `comm -23 /home/dx1/RIDE/regtest/repos/$runner_id <(sort /home/dx1/RIDE/regtest/repos/$runner_id-completed) | shuf`; do
-    cd "/home/dx1/RIDE/regtest/repos/$repo"
+for folder in `comm -23 /home/dx1/RIDE/regtest/repos/$runner_id <(sort /home/dx1/RIDE/regtest/repos/$runner_id-completed) | shuf`; do
+    cd "/home/dx1/RIDE/regtest/repos/$folder"
+    commit=$(echo $folder | awk -F- '{print $NF}')
+    name=$(echo $folder | xargs basename | awk -F- '{print $1}')
+    repo=$(awk -F, -v name=$name -v commit=$commit '$1 ~ name && $2 == commit {print $1}' ~/Downloads/pr-data.csv| head -n1)
+
     git clean -fd
     git checkout $commit
 
@@ -14,5 +18,7 @@ for repo in `comm -23 /home/dx1/RIDE/regtest/repos/$runner_id <(sort /home/dx1/R
 
     mvn edu.illinois:nondex-maven-plugin:2.2.5-SNAPSHOT:nondex -X -e -fn 2>&1 | tee NonDex.log
     for module in `find . -type f -wholename '*/.nondex/LATEST'`; do for round in `cat $module`; do if [[ -s "${module%/LATEST}/$round/failures" ]]; then cat "${module%/LATEST}/$round/failures"; fi; done | sed 's|#|.|g;s|^|'"\"$repo\",\"$commit\",\"$(echo $module | sed 's|/.nondex/LATEST||g;s|./||g')\""',"|g;s|$|","ID"|g'; done | sort -u | tee NonDex-results.csv
+
+    echo $folder | tee -a /home/dx1/RIDE/regtest/repos/$runner_id-completed
     cd ~
 done

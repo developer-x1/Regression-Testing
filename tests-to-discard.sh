@@ -1,1 +1,3 @@
 tail -n+2 ~/Downloads/pr-data.csv | awk -F, '{print $1 " " $2}' | sort -u | while read -r repo commit; do echo $(basename $repo .git)-$commit; done | xargs -P10 -I {} -n 1 bash -c 'cd {}; git checkout $(echo {} | awk -F- "{print \$NF}") &>/dev/null || echo {}' 2>/dev/null | sort | tee x
+
+comm -23 <(tail -n+2 ~/Downloads/pr-data.csv | awk -F, '{print $1 " " $2}' | sort -u | while read -r repo commit; do echo $(basename $repo .git)-$commit; done | sort) <(sort x) | xargs -n1 ~/RIDE/Regression-Testing/run-iDFlakies-Nondex-predownloaded.sh
