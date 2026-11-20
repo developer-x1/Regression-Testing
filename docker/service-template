@@ -1,0 +1,12 @@
+  NAME:
+    build: 
+        context: ./Dockerfiles
+        dockerfile: Dockerfile.VERSION
+        args:
+          - repo=REPO
+          - commit=COMMIT
+    environment:
+      - repo=REPO
+      - commit=COMMIT
+    volumes:
+      - flaky_testing:/mnt

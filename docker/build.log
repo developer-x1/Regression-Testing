@@ -1,0 +1,149 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 658.09kB done
+#1 DONE 0.0s
+
+#2 [alibaba-nacos-525672272ecb00cd769a13c7b21a8e51cf873f25 internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 DONE 0.0s
+
+#3 [alibaba-nacos-525672272ecb00cd769a13c7b21a8e51cf873f25 internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 DONE 0.4s
+
+#4 [alibaba-nacos-525672272ecb00cd769a13c7b21a8e51cf873f25 internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  1/19] FROM docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute@sha256:ebcb84ca3ccfb147f15064abb5274f59a8c29fd4834760537c5470b358be22b5
+#5 resolve docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute@sha256:ebcb84ca3ccfb147f15064abb5274f59a8c29fd4834760537c5470b358be22b5 0.0s done
+#5 DONE 0.0s
+
+#6 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 internal] load build context
+#6 transferring context: 35B done
+#6 DONE 0.0s
+
+#7 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  2/19] RUN apt-get update && apt-get install -y jq && apt-get clean && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  6/19] WORKDIR /home/ubuntu/iDFlakies
+#8 CACHED
+
+#9 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 10/19] WORKDIR /home/ubuntu/NonDex
+#9 CACHED
+
+#10 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  8/19] WORKDIR /home/ubuntu
+#10 CACHED
+
+#11 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 13/19] RUN git clone https://github.com/UT-SE-Research/FlakeSync.git
+#11 CACHED
+
+#12 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 15/19] RUN mvn clean install -U
+#12 CACHED
+
+#13 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 12/19] WORKDIR /home/ubuntu
+#13 CACHED
+
+#14 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  4/19] WORKDIR /home/ubuntu
+#14 CACHED
+
+#15 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  7/19] RUN mvn clean install -U
+#15 CACHED
+
+#16 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 16/19] WORKDIR /home/ubuntu
+#16 CACHED
+
+#17 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 11/19] RUN mvn clean install -U
+#17 CACHED
+
+#18 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  5/19] RUN git clone https://github.com/UT-SE-Research/iDFlakies.git
+#18 CACHED
+
+#19 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  9/19] RUN git clone https://github.com/TestingResearchIllinois/NonDex.git
+#19 CACHED
+
+#20 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 14/19] WORKDIR /home/ubuntu/FlakeSync
+#20 CACHED
+
+#21 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69  3/19] COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+#21 CACHED
+
+#22 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 17/19] RUN rm -rf iDFlakies NonDex FlakeSync
+#22 CACHED
+
+#23 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 18/19] RUN git clone "https://github.com/alibaba/nacos"
+#23 0.126 Cloning into 'nacos'...
+#23 ...
+
+#2 [abel533-mapper-3c0b3307011fad53f811e08d05147d94fc6c0d67 internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 DONE 0.0s
+
+#2 [apache-struts-3a7c35a014f8a3471a1b75e7546e01ecf21d5db3 internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 DONE 0.1s
+
+#4 [apache-struts-3a7c35a014f8a3471a1b75e7546e01ecf21d5db3 internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#3 [abel533-mapper-3c0b3307011fad53f811e08d05147d94fc6c0d67 internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 DONE 0.9s
+
+#4 [apache-cloudstack-64262d943f012c40deac3cd87c67d44fdc727b52 internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#23 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 18/19] RUN git clone "https://github.com/alibaba/nacos"
+#23 ...
+
+#2 [apache-cloudstack-b7835d02d251a50e3cd3a45bc9bae3b14945944f internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 DONE 0.1s
+
+#4 [apache-cloudstack-b7835d02d251a50e3cd3a45bc9bae3b14945944f internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#3 [apache-cloudstack-b7835d02d251a50e3cd3a45bc9bae3b14945944f internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 DONE 0.9s
+
+#2 [apache-archiva-292dbe1bb4323dd299d36b78f37d9c1d55c889f8 internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 DONE 0.1s
+
+#4 [apache-archiva-292dbe1bb4323dd299d36b78f37d9c1d55c889f8 internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#3 [apache-archiva-292dbe1bb4323dd299d36b78f37d9c1d55c889f8 internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 DONE 0.9s
+
+#23 [alibaba-nacos-0ac96e1602baf1f516c3c614f13523adb2992e69 18/19] RUN git clone "https://github.com/alibaba/nacos"
+#23 CANCELED
+
+#2 [apache-ignite-3-d3ee2e664508636f04c001d675791e3bb5ffdb8d internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 DONE 0.1s
+
+#3 [apache-ignite-3-d3ee2e664508636f04c001d675791e3bb5ffdb8d internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 CANCELED
+
+#2 [tomsun28-sureness-3bed46f784372764ec0467762ae3a7abd230af7d internal] load build definition from Dockerfile.8
+#2 transferring dockerfile: 852B 0.0s done
+#2 WARN: JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 30)
+#2 DONE 0.1s
+
+#4 [tomsun28-sureness-3bed46f784372764ec0467762ae3a7abd230af7d internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#3 [tomsun28-sureness-3bed46f784372764ec0467762ae3a7abd230af7d internal] load metadata for docker.io/library/maven:3.10.0-eclipse-temurin-8-resolute
+#3 DONE 0.9s

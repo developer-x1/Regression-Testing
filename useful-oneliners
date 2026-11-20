@@ -1,0 +1,3 @@
+for i in `find . -maxdepth 1 -type d -exec sh -c 'test -f \$1/iDFlakies-results.csv && test -f \$1/NonDex-results.csv && test ! -d ../repos-export/\$1 && echo \$1' _ {} \;`; do mkdir ~/RIDE/regtest/repos-export/$i; cp $i/iDFlakies* ~/RIDE/regtest/repos-export/$i; cp $i/NonDex* ~/RIDE/regtest/repos-export/$i; done
+find . -type f -wholename '*iDFlakies-results.csv' | sort | xargs cat | tee iDFlakies.csv
+find . -type f -wholename '*NonDex-results.csv' | sort | xargs cat | tee NonDex.csv      

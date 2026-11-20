@@ -1,6 +1,6 @@
 #! /bin/bash
 
-parts=(new_part_aa new_part_ab new_part_ac new_part_ad new_part_ae new_part_af new_part_ag new_part_ah new_part_ai part_aj)
+parts=(new_part_aa new_part_ab new_part_ac new_part_ad new_part_ae new_part_af new_part_ag new_part_ah new_part_ai new_part_aj)
 
 for part in "${parts[@]}"; do
     echo "$part"
